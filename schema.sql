@@ -38,3 +38,14 @@ INSERT INTO distributor_orders (
   'pending', 1, 5000.00, '2026-04-15',
   'Hyderabad', 'Telangana'
 );
+INSERT INTO distributor_orders (
+  order_number, bill_date, buyer_entity_name, buyer_entity_mobile,
+  total_invoice_amount, total_discount, total_payable_amount,
+  order_status, payment_status, paid_amount, payment_due_date,
+  ship_to_city, ship_to_state
+) VALUES
+  ('ORD-1002', '2026-04-02', 'CityCare Medicals', '9123456789', 18000.00, 500.00, 17500.00, 'shipped', 2, 17500.00, '2026-04-05', 'Bengaluru', 'Karnataka'),
+  ('ORD-1003', '2026-04-03', 'Wellness Drug House', '9988776655', 42000.00, 2000.00, 40000.00, 'pending', 1, 10000.00, '2026-04-18', 'Chennai', 'Tamil Nadu'),
+  ('ORD-1004', '2026-04-04', 'Medline Supplies', '9090909090', 15000.00, 0.00, 15000.00, 'delivered', 2, 15000.00, '2026-04-06', 'Pune', 'Maharashtra'),
+  ('ORD-1005', '2026-04-05', 'Apollo Pharmacy', '9876501234', 30000.00, 1500.00, 28500.00, 'pending', 1, 5000.00, '2026-04-20', 'Hyderabad', 'Telangana')
+;
