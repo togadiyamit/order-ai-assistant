@@ -1,0 +1,63 @@
+{
+  "info": {
+    "_postman_id": "b6b84b6f-4c9c-4db1-9a0b-5d6a5e4a4b2a",
+    "name": "Order AI Assistant",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Chat (Streaming)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"What is the status of order ORD-1001?\",\n  \"chatHistory\": []\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7000/chat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7000",
+          "path": ["chat"]
+        }
+      }
+    },
+    {
+      "name": "Chat (Simple)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"Show pending payments\",\n  \"chatHistory\": []\n}"
+        },
+        "url": {
+          "raw": "http://localhost:7000/chat/simple",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7000",
+          "path": ["chat", "simple"]
+        }
+      }
+    }
+  ]
+}
